@@ -1,0 +1,418 @@
+header{}
+header .top{
+    background-color: #eee;
+}
+        
+header .top ul{
+    text-align: right;
+}
+        
+header .top ul li{
+    position: relative;
+}
+        
+header .top ul li:after{
+    content: "";
+    width: 1px;
+    height: 8px;
+    background-color: #aaa;
+    position: absolute;
+    top: 50%;
+    right: -1px;
+            transform: translateY(-50%);
+        }
+        
+        header .top ul li:last-child:after{
+            content: none;
+        }
+    
+        header .top ul li a{
+            font-size: 11px;
+            line-height: 24px;
+            padding: 0px 4px;
+            margin: 0px 2px;
+            color: #555;
+        }
+        
+        header #logo{
+            margin: 20px 0px;
+        }
+        
+        header #logo h1{
+            font-size: 0px;
+            background-image: url(./img/logo.jpg);
+            background-size: 146px 68px;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 160px;
+            height: 70px;
+        }
+        
+        header #menu{
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+        }
+        
+        header #menu .pc{}
+        
+        header #menu .pc .menu{}
+        header #menu .pc .menu ul{
+            display: grid;
+            grid-template-columns: repeat(7,1fr) 240px; 
+            /* 고정px이 들어감 고정px은 내가 나머지는 너네가 알아서*/
+            align-content: center;
+            align-items: center;
+        }
+        
+        header #menu .pc .menu ul li{}
+        header #menu .pc .menu ul li a{
+            line-height: 70px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        header #menu  .pc .menu ul li form{
+            display: grid;
+            grid-template-columns: 1fr 40px;
+            grid-gap: 0px;
+            border: 1px solid #003477;
+        }
+        
+        header #menu .pc .menu ul li form #input{
+            line-height: 40px;
+            padding: 0px 15px;
+            border: 0px;
+            width: 100%;
+        }
+        
+        header #menu .pc .menu ul li form #submit{
+            height: 40px;
+            border: 0px;
+            background-color: white;
+            font-size: 0px;
+            background-image: url(./img/srch.png);
+            background-size: 34px 34px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        header #menu .pc .menuBox{
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            background-color: white;
+            width: 100%;
+            overflow: hidden;
+            max-height: 0px;
+            transition: all .5s;
+            z-index: 9;
+            border-top: 1px solid #ccc;
+        }
+        header #menu:hover .pc .menuBox{
+            max-height: 700px;
+        }
+        
+        header #menu .pc .menuBox .grid{
+            display: grid;
+            grid-template-columns: repeat(7,1fr) 240px;
+            grid-gap: 0px;
+            margin: 20px 0px 40px;
+        }
+        
+        header #menu .pc .menuBox .grid ul{}
+        header #menu .pc .menuBox .grid ul li{
+            width: 100%;
+        }
+        
+        header #menu .pc .menuBox .grid ul li a{
+            line-height: 25px;
+            margin: 5px 0px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0px 10px;
+        }
+        header #menu .pc .menuBox .grid ul li a:hover{
+            color: #5ab94a;
+        }
+        
+        main{}
+        main #home{}
+        
+        main #home .slider{}
+        
+        main #home .slider .swiper-slide{
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: height .5s;
+        }
+        
+        main #home .slider .swiper-slide.p1{
+            background-image: url(./img/main_01.png);
+        }
+        main #home .slider .swiper-slide.p2{
+            background-image: url(./img/main02.jpg);
+        }
+        main #home .slider .swiper-slide.p3{
+            background-image: url(./img/main03.jpg);
+        }
+        
+        main #home .pagin{}
+        
+        main #home .pagin .swiper-pagination-bullet{
+            margin: 0px 2px;
+            opacity: 1;
+            background-color: transparent;
+            border: 1px solid white;
+            width: 15px;
+            height: 15px;
+        }
+        main #home .pagin .swiper-pagination-bullet.swiper-pagination-bullet-active{
+            background-color: white;
+        }
+        
+        main .wrap > .title{
+            margin: 40px 0px 20px;
+            padding: 0px 20px;
+        }
+        
+        main .wrap > .title .name{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        main .wrap > .title .more{
+            color: #666;
+        }
+        
+        main #IP{}
+        main #IP .list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0px 20px;
+        }
+        
+        main #IP .list li{}
+        main #IP .list li a{
+            width: 100%;
+        }
+        
+        main #IP .list li a .img{
+            position: relative;
+        }
+        
+        main #IP .list li a .img img{
+            width: 100%;
+        }
+        
+        main #IP .list li a .img .box{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 200px;
+            height: 100%;
+            background-color: #000c;
+            color: white;
+            text-align: left;
+            padding: 20px;
+        }
+        
+        main #IP .list li a .img .box .type{
+            font-size: 20px;
+            color: #ffdf0b;
+            margin-bottom: 10px;
+        }
+        
+        main #IP .list li a .img .box .tag{
+            line-height: 24px;
+            font-size: 15px;
+        }
+        
+        main #IP .list li a .img .box .writer{
+            color: #777;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-weight: bold;
+        }
+        
+        main #IP .list li a .title{
+            line-height: 70px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        main #story{
+            background-color: #f2f2f2;
+            margin-top: 80px;
+        }
+        main #story .main{
+            display: grid;
+            grid-template-columns: 480px 1fr;
+            grid-gap: 20px;
+        }
+        
+        main #story .main li{}
+        main #story .main li img{
+            width: 100%;
+        }
+        
+        main #story .main li .title{
+            text-align: left;
+        }
+        
+        main #story .main li .title .name{
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 1px solid black;
+            line-height: 50px;
+            padding: 0px 15px;
+        }
+        
+        main #story .main li .title .context{
+            padding: 20px;
+        }
+        
+        main #story .list{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-gap: 10px;
+            margin: 40px 0px;
+        }
+        
+        main #story .list li{
+            overflow: hidden;
+        }
+        
+        main #story .list li a{
+            width: 100%;
+        }
+        
+        main #story .list li a img{
+            width: 100%;
+        }
+        
+        main #story .list li a .subject{
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            white-space: nowrap;
+            overflow: hidden; /* 일정한 크기에서 넘치는걸 보여주지 않겠다. */
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+        
+        main .bennar{
+            margin: 40px 0px;
+        }
+        
+        main .bennar a{
+            width: 100%;
+        }
+        
+        main .bennar a img{
+            width: 100%;
+        }
+        
+        main #board{}
+        main #board .list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+        }
+        
+        main #board .list li{}
+        main #board .list li .title{
+            border-bottom: 1px solid black;
+            padding: 0px 20px;
+        }
+        
+        main #board .list li .title .name{
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        
+        main #board .list li .title .more{
+            color: #666;
+        }
+        
+        main #board .list li .board{
+            margin-top: 20px;
+            padding: 0px 20px;
+        }
+        main #board .list li .board li{
+            width: 100%;
+        }
+        
+        main #board .list li .board li a{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 100px;
+            grid-gap: 0px;
+        }
+        
+        main #board .list li .board li a .subject{
+            text-align: left;
+            line-height: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        main #board .list li .board li a .date{
+            color: #555;
+        }
+        
+        footer{
+            margin-top: 80px; /* 30px; */
+        }
+        
+        footer .link{
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        footer .link li{
+            position: relative;
+        }
+        
+        footer .link li:after{
+            content: "";
+            width: 1px;
+            height: 10px;
+            background-color: #555;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+        }
+        
+        footer .link li:last-child:after{
+            content: none;
+        }
+        
+        footer .link li a{
+            line-height: 40px;
+            color: #555;
+            padding: 0px 5px;
+            margin: 0px 2px;
+            font-size: 12px;
+        }
+        
+        footer .footer{
+            background-color: #eee;
+            padding: 50px 0px;
+        }
+        
+        footer .footer .address{
+            text-align: left;
+        }
+        
+        footer .footer .logo{
+            text-align: right;
+        }
