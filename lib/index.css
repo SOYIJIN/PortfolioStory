@@ -17,8 +17,8 @@ header .top ul li:after{
     height: 8px;
     background-color: #aaa;
     position: absolute;
-    top: 50%;
-    right: -1px;
+            top: 50%;
+            right: -1px;
             transform: translateY(-50%);
         }
         
